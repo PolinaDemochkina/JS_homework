@@ -24,7 +24,7 @@ export function createUserRouter(db_games: GameDB, db_users: UserDB): Router {
         const id = db_users.add({ id: -1,
                                            name: name,
                                            gameRecords: [] });
-        response.json({ id: id });
+        response.send();
     });
 	
     router.put("/users/:id", function (request, response) {

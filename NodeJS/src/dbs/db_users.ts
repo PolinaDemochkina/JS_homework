@@ -50,7 +50,6 @@ export default class UserDB {
   add = (user: User) => {
     user.id = nextUserId++;
     userList = [...userList, user];
-    return user;
   };
 
   update = (user: User) => {

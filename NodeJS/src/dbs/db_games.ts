@@ -58,7 +58,6 @@ export default class GameDB {
   create = (game: Game) => {
     game.id = gamesCount++;
     games = [...games, game];
-    return game;
   };
 
   update = (game: Game) => {

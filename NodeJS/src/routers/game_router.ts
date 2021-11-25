@@ -21,7 +21,7 @@ export function createGameRouter(db_games: GameDB, db_users: UserDB): Router {
     router.post("/games", function (request, response) {
         let game = request.body;
         const id = db_games.create(game);
-        response.json({ id: id });
+        response.send();
     });
     router.put("/games/:id", function (request, response) {
         const id = parseInt(request.params.id);
