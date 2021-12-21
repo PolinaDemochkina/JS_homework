@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="top-bar">
+  <a routerLink="">Back</a>
+</div>
+<div class="shopping-list">
+  <h1>Shopping List</h1>
+  <div class="ingredientContainer">
+    <div class="input-part">
+      <mat-form-field appearance="outline">
+        <mat-label>Add ingredient</mat-label>
+        <input matInput placeholder="Add ingredient" #input>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" (click)="addToCart(input.value)">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="cart-item" *ngFor="let ingredient of ingredients" (click)="update(ingredients)">
+    <h3 class="ingredient-name">{{ ingredient.name }}</h3>
+    <div class="spinbox">
+      <button mat-icon-button (click)="decrement(ingredient.name)">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <input matInput readonly class="quantity" value="{{ingredient.quantity}}" #quantity>
+      <button mat-icon-button (click)="increment(ingredient.name)">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

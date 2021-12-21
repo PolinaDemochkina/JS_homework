@@ -1,0 +1,1 @@
+![alt text](https://github.com/PolinaDemochkina/JS_homework/demo.gif)

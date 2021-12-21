@@ -1,0 +1,18 @@
+mat-selection-list{
+  height:40vh;
+  outline:none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+mat-selection-list .mat-list-option {
+  padding: 16px;
+}
+
+::ng-deep.mat-pseudo-checkbox{
+  display: none !important;
+}
+
+.selected {
+  background-color: #AAAD5B;
+}

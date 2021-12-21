@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h1>{{recipe?.name}}</h1>
+<div >
+  <h2>Ingredients:</h2>
+  <mat-selection-list>
+    <mat-list-option *ngFor="let ingredient of recipe?.ingredients;" [value]="ingredient" [disableRipple]="true">
+      <div style="display:flex; justify-content:space-between;align-items:center">
+        <div style="display:flex;align-items:center">
+          <div style="display:flex; flex-direction:column">
+            <div>
+              <h3> {{ingredient}}</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button mat-icon-button (click)="addToCart(ingredient)" #add_button>
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>
